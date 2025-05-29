@@ -1,4 +1,6 @@
 <?php
+    include_once __DIR__ . "/zero-function.php";
+
     $product_code = filter_input(INPUT_GET, 'product-code');
     $product_price = filter_input(INPUT_GET, 'product-price');
 
@@ -17,7 +19,7 @@
     */
 
         
-    if (empty($product_price) || $product_price !== '0') {
+    if (isAnEmptyNonZeroString($product_price)) {
         $errors[] = 'missing product price';
     }
     
