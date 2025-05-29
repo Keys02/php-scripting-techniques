@@ -8,9 +8,18 @@
         $errors[] = 'missing product code and product id';
     } elseif (empty($product_code)) {
         $errors[] = 'missing product code';
-    } elseif (empty($product_price)) {
-        $error[] = 'missing product price';
     } 
+    
+    /* 
+        Since empty('0') return true
+        and empty('') returns true
+        we have to test for a condition where 0 is the price of a product.
+    */
+
+        
+    if (empty($product_price) && $product_price !== '0') {
+        $errors[] = 'missing product price';
+    }
     
     if (strlen($product_code) < 3) {
         $errors[] = 'product code contains few characters';
