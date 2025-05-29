@@ -17,7 +17,7 @@
     */
 
         
-    if (empty($product_price) && $product_price !== '0') {
+    if (empty($product_price) || $product_price !== '0') {
         $errors[] = 'missing product price';
     }
     
