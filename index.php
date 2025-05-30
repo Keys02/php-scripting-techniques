@@ -6,9 +6,9 @@
     <body>
         <form method='get' action='process.php'>
             Product code: <input type='text' name='product-code'>
-            <br><br>
+            <br/><br/>
             Price: <input type='text' name='product-price'>
-            <br><br>
+            <br/><br/>
             <input type='submit'>
         </form>
     </body>
