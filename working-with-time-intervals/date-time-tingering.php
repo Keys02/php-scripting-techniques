@@ -20,7 +20,7 @@
             if (intval($comp) > 0) { return (intval($comp) <= 1) ? [$key, $comp] : ["{$key}s", $comp]; }
         }
 
-        return ["seconds", 0];
+        return ["second", 0];
     }
 
     echo 'This question was posted ' . calculatePostInterval($quest_post_date)[1] . " " . calculatePostInterval($quest_post_date)[0] . ' ago';
