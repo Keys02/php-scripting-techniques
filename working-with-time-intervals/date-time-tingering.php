@@ -17,7 +17,7 @@
         ];
 
         foreach ($post_interval_comps as $key => $comp) {
-            if (intval($comp) > 0) { return (intval($comp) <= 1) ? [$key, $comp] : ["{$key}s", $comp]; }
+            if ($comp > 0) { return ($comp <= 1) ? [$key, $comp] : ["{$key}s", $comp]; }
         }
 
         return ["second", 0];
